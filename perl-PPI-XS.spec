@@ -1,24 +1,24 @@
-
-%define realname   PPI-XS
-%define version    0.901
+%define upstream_name    PPI-XS
+%define upstream_version 0.901
 %define release    %mkrel 2
 
-Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 3
+
 Summary:    (Minor) XS acceleration for PPI
-Source:     http://www.cpan.org/modules/by-module/PPI/%{realname}-%{version}.tar.gz
-Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: perl-devel
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/PPI/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(ExtUtils::MakeMaker)
 BuildRequires: perl(File::Spec)
 BuildRequires: perl(PPI)
 BuildRequires: perl(Test::More)
+BuildRequires: perl-devel
 
-
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 PPI::XS provides XS-based acceleration of the core PPI packages. It
@@ -33,14 +33,14 @@ function, it is preferable to upgrade PPI::XS any time you do a major
 upgrade of PPI itself.
 
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
-make test
+%make test
 
 %install
 rm -rf %buildroot
@@ -54,5 +54,3 @@ rm -rf %buildroot
 %doc LICENSE README Changes
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
-
