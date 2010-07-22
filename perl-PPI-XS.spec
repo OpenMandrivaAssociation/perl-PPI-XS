@@ -1,6 +1,6 @@
 %define upstream_name    PPI-XS
 %define upstream_version 0.901
-%define release    %mkrel 4
+%define release    %mkrel 5
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
