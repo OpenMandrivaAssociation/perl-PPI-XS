@@ -1,10 +1,9 @@
 %define upstream_name    PPI-XS
 %define upstream_version 0.901
-%define release    %mkrel 5
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 3
+Release:    %mkrel 5
 
 Summary:    (Minor) XS acceleration for PPI
 License:    GPL+ or Artistic
