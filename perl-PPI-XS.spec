@@ -53,3 +53,33 @@ rm -rf %buildroot
 %doc LICENSE README Changes
 %{_mandir}/man3/*
 %perl_vendorlib/*
+
+
+%changelog
+* Wed Jan 25 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 0.901.0-6
++ Revision: 768358
+- svn commit -m mass rebuild of perl extension against perl 5.14.2
+
+* Thu Jul 22 2010 Jérôme Quelin <jquelin@mandriva.org> 0.901.0-5mdv2011.0
++ Revision: 556773
+- rebuild
+- rebuild
+- rebuild for perl 5.12
+- rebuild for perl 5.12
+
+* Mon Jul 12 2010 Jérôme Quelin <jquelin@mandriva.org> 0.901.0-3mdv2011.0
++ Revision: 551273
+- rebuild using %%perl_convert_version
+
+* Thu May 14 2009 Jérôme Quelin <jquelin@mandriva.org> 0.901-2mdv2010.0
++ Revision: 375699
+- rebuild
+
+* Thu May 07 2009 Jérôme Quelin <jquelin@mandriva.org> 0.901-1mdv2010.0
++ Revision: 372939
+- import perl-PPI-XS
+
+
+* Thu May 07 2009 cpan2dist 0.901-1mdv
+- initial mdv release, generated with cpan2dist
+
