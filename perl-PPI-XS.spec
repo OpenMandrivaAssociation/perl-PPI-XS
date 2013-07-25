@@ -1,15 +1,15 @@
 %define upstream_name    PPI-XS
-%define upstream_version 0.901
+%define upstream_version 0.902
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	6
+Version:    %perl_convert_version 0.902
+Release:	1
 
 Summary:    (Minor) XS acceleration for PPI
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/PPI/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:    http://www.cpan.org/modules/by-module/PPI/PPI-XS-0.902.tar.gz
 
 BuildRequires: perl(ExtUtils::MakeMaker)
 BuildRequires: perl(File::Spec)
@@ -82,4 +82,5 @@ rm -rf %buildroot
 
 * Thu May 07 2009 cpan2dist 0.901-1mdv
 - initial mdv release, generated with cpan2dist
+
 
