@@ -50,7 +50,7 @@ rm -rf %buildroot
 
 %files
 %defattr(-,root,root)
-%doc LICENSE README Changes
+%doc   Changes
 %{_mandir}/man3/*
 %perl_vendorlib/*
 
