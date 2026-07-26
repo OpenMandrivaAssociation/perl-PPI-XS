@@ -1,15 +1,13 @@
 %define upstream_name    PPI-XS
-%define upstream_version 0.910
-
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:	1
+Version:    0.910
+Release:	2
 
 Summary:    (Minor) XS acceleration for PPI
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        https://github.com/karenetheridge/PPI-XS
-Source0:    https://cpan.metacpan.org/authors/id/E/ET/ETHER/PPI-XS-%{upstream_version}.tar.gz
+Source0:    https://cpan.metacpan.org/authors/id/E/ET/ETHER/PPI-XS-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl(ExtUtils::MakeMaker)
@@ -33,7 +31,7 @@ function, it is preferable to upgrade PPI::XS any time you do a major
 upgrade of PPI itself.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -70,9 +68,7 @@ rm -rf %buildroot
 
 * Mon Jul 12 2010 Jérôme Quelin <jquelin@mandriva.org> 0.901.0-3mdv2011.0
 + Revision: 551273
-- rebuild using %%perl_convert_version
-
-* Thu May 14 2009 Jérôme Quelin <jquelin@mandriva.org> 0.901-2mdv2010.0
+- rebuild using %0.910 Thu May 14 2009 Jérôme Quelin <jquelin@mandriva.org> 0.901-2mdv2010.0
 + Revision: 375699
 - rebuild
 
